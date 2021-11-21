@@ -17,7 +17,7 @@
     owner = "input-output-hk";
     repo = "cardano-prelude";
     rev = "c7fc9fba236972c27a55e0f3d34c2758cf616bfc";
-    sha256 = "0000000000000000000000000000000000000000000000000000";
+    sha256 = "k6+WBI8WV00goFjDZT0851GZfV8zJldsYa5jFy2E4Wk=";
   };
   cardano-ledger-specs = fetchFromGitHub {
     owner = "input-output-hk";
