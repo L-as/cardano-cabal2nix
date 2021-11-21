@@ -19,6 +19,12 @@
     rev = "c7fc9fba236972c27a55e0f3d34c2758cf616bfc";
     sha256 = "0000000000000000000000000000000000000000000000000000";
   };
+  cardano-ledger-specs = fetchFromGitHub {
+    owner = "input-output-hk";
+    repo = "cardano-ledger-specs";
+    rev = "45e402646e99e3c44720a2f9bc1938a11200e8df";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
+  };
   plutus = fetchFromGitHub {
     owner = "input-output-hk";
     repo = "plutus";
