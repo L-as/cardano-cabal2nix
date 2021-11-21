@@ -15,21 +15,18 @@
     haskellOverlayFor = system:
       let
         pkgs = nixpkgsFor system;
-        cpkgs = final: prev:
-          (import ./pkgs.nix { inherit (pkgs) fetchFromGitHub; }) final;
         overlay = import ./overlay.nix { inherit (pkgs) fetchFromGitHub; lib = pkgs.haskell.lib.compose; };
       in
-        nixpkgs.lib.composeExtensions pkgs overlay;
+      overlay;
 
     packagesFor = system:
       let
         pkgs = nixpkgsFor system;
         hpkgs = pkgs.haskellPackages.override {
-          overrides = import ./overlay.nix { inherit (pkgs) fetchFromGitHub; lib = pkgs.haskell.lib.compose; };
+          overrides = self.haskellOverlayFor system;
         };
       in
-      (import ./pkgs.nix { inherit (pkgs) fetchFromGitHub; })
-        hpkgs;
+      hpkgs; # TODO: limit to new packages
     packages = nixpkgs.lib.genAttrs supportedSystems self.packagesFor;
   };
 }
