@@ -10,7 +10,6 @@
 , quickcheck-instances, random, serialise, stm, strict-containers
 , tasty, tasty-hunit, tasty-quickcheck, temporary, text, time
 , typed-protocols, typed-protocols-cborg, typed-protocols-examples
-, unix
 }:
 mkDerivation {
   pname = "ouroboros-network";
@@ -24,10 +23,9 @@ mkDerivation {
     cardano-prelude cardano-slotting cborg containers contra-tracer
     deepseq directory dns fingertree hashable io-classes io-sim iproute
     monoidal-synchronisation network network-mux nothunks
-    ouroboros-network-framework pipes psqueues QuickCheck
-    quickcheck-instances random serialise strict-containers tasty
-    tasty-quickcheck text time typed-protocols typed-protocols-cborg
-    unix
+    ouroboros-network-framework pipes psqueues QuickCheck random
+    serialise strict-containers tasty tasty-quickcheck text time
+    typed-protocols typed-protocols-cborg
   ];
   executableHaskellDepends = [
     async base bytestring containers contra-tracer directory
@@ -37,12 +35,11 @@ mkDerivation {
   testHaskellDepends = [
     aeson array async base bytestring cardano-prelude cardano-slotting
     cborg containers contra-tracer deque directory dns filepath
-    hashable io-classes io-sim iproute monoidal-synchronisation mtl
-    network network-mux nothunks ouroboros-network-framework
-    ouroboros-network-testing process process-extras psqueues
-    QuickCheck quickcheck-instances random serialise tasty tasty-hunit
-    tasty-quickcheck temporary text time typed-protocols
-    typed-protocols-examples
+    hashable io-classes io-sim iproute mtl network network-mux nothunks
+    ouroboros-network-framework ouroboros-network-testing process
+    process-extras psqueues QuickCheck quickcheck-instances random
+    serialise tasty tasty-hunit tasty-quickcheck temporary text time
+    typed-protocols typed-protocols-examples
   ];
   doHaddock = false;
   description = "A networking layer for the Ouroboros blockchain protocol";

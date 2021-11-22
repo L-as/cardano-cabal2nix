@@ -6,14 +6,13 @@
 , cardano-ledger-byron, cardano-ledger-byron-test
 , cardano-ledger-core, cardano-ledger-pretty
 , cardano-ledger-shelley, cardano-prelude, cardano-prelude-test
-, cardano-protocol-tpraos, cardano-slotting, cborg, compact-map
-, containers, criterion, data-default-class, deepseq, directory
-, generic-random, groups, hashable, hedgehog, hedgehog-quickcheck
-, iproute, lib, mtl, nothunks, plutus-ledger-api, prettyprinter
-, process-extras, QuickCheck, scientific, serialise, small-steps
-, small-steps-test, strict-containers, tasty, tasty-hedgehog
-, tasty-hunit, tasty-quickcheck, text, time, transformers
-, tree-diff, vector
+, cardano-protocol-tpraos, cardano-slotting, cborg, containers
+, criterion, data-default-class, deepseq, directory, generic-random
+, groups, hashable, hedgehog, hedgehog-quickcheck, iproute, lib
+, mtl, nothunks, plutus-ledger-api, prettyprinter, process-extras
+, QuickCheck, scientific, serialise, small-steps, small-steps-test
+, strict-containers, tasty, tasty-hedgehog, tasty-hunit
+, tasty-quickcheck, text, time, transformers, tree-diff, vector
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley-test";
@@ -25,10 +24,10 @@ mkDerivation {
     cardano-ledger-byron cardano-ledger-byron-test cardano-ledger-core
     cardano-ledger-pretty cardano-ledger-shelley cardano-prelude
     cardano-prelude-test cardano-protocol-tpraos cardano-slotting cborg
-    compact-map containers data-default-class deepseq directory
-    generic-random hashable hedgehog hedgehog-quickcheck iproute mtl
-    nothunks plutus-ledger-api process-extras QuickCheck serialise
-    small-steps small-steps-test strict-containers tasty tasty-hunit
+    containers data-default-class deepseq directory generic-random
+    hashable hedgehog hedgehog-quickcheck iproute mtl nothunks
+    plutus-ledger-api process-extras QuickCheck serialise small-steps
+    small-steps-test strict-containers tasty tasty-hunit
     tasty-quickcheck text time transformers tree-diff vector
   ];
   testHaskellDepends = [
@@ -36,10 +35,10 @@ mkDerivation {
     cardano-crypto-class cardano-crypto-praos cardano-ledger-byron
     cardano-ledger-core cardano-ledger-pretty cardano-ledger-shelley
     cardano-prelude cardano-prelude-test cardano-protocol-tpraos
-    cardano-slotting cborg compact-map containers data-default-class
-    groups hedgehog iproute prettyprinter QuickCheck scientific
-    small-steps small-steps-test strict-containers tasty tasty-hedgehog
-    tasty-hunit tasty-quickcheck time transformers
+    cardano-slotting cborg containers data-default-class groups
+    hedgehog iproute prettyprinter QuickCheck scientific small-steps
+    small-steps-test strict-containers tasty tasty-hedgehog tasty-hunit
+    tasty-quickcheck time transformers
   ];
   benchmarkHaskellDepends = [
     base cardano-crypto-class cardano-crypto-praos cardano-ledger-core

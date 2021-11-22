@@ -4,9 +4,9 @@
 , cardano-binary, cardano-crypto, cardano-crypto-class
 , cardano-crypto-wrapper, cardano-ledger-byron, cardano-ledger-core
 , cardano-prelude, cardano-protocol-tpraos, cardano-slotting, cborg
-, compact-map, constraints, containers, data-default-class, deepseq
-, groups, iproute, lib, mtl, nothunks, primitive, quiet
-, small-steps, strict-containers, text, time, transformers
+, constraints, containers, data-default-class, deepseq, groups
+, iproute, lib, mtl, nothunks, primitive, quiet, small-steps
+, strict-containers, text, time, transformers
 }:
 mkDerivation {
   pname = "cardano-ledger-shelley";
@@ -16,10 +16,10 @@ mkDerivation {
     aeson base base16-bytestring bytestring cardano-binary
     cardano-crypto cardano-crypto-class cardano-crypto-wrapper
     cardano-ledger-byron cardano-ledger-core cardano-prelude
-    cardano-protocol-tpraos cardano-slotting cborg compact-map
-    constraints containers data-default-class deepseq groups iproute
-    mtl nothunks primitive quiet small-steps strict-containers text
-    time transformers
+    cardano-protocol-tpraos cardano-slotting cborg constraints
+    containers data-default-class deepseq groups iproute mtl nothunks
+    primitive quiet small-steps strict-containers text time
+    transformers
   ];
   license = lib.licenses.asl20;
 }

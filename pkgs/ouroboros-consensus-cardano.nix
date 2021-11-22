@@ -27,7 +27,7 @@ mkDerivation {
   executableHaskellDepends = [
     aeson base bytestring cardano-binary cardano-crypto-wrapper
     cardano-ledger-alonzo cardano-ledger-byron cardano-ledger-core
-    cardano-ledger-shelley cborg containers contra-tracer mtl nothunks
+    cardano-ledger-shelley cborg containers contra-tracer mtl
     optparse-applicative ouroboros-consensus ouroboros-consensus-byron
     ouroboros-consensus-shelley ouroboros-network plutus-ledger-api
     serialise strict-containers text

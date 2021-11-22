@@ -1,7 +1,7 @@
 { sources }:
 
-{ mkDerivation, base, BNFC-meta, containers, criterion, hpack, lib
-, mtl, QuickCheck, random
+{ mkDerivation, base, BNFC-meta, containers, criterion, lib, mtl
+, QuickCheck, random
 }:
 mkDerivation {
   pname = "fomega";
@@ -12,7 +12,6 @@ mkDerivation {
   libraryHaskellDepends = [
     base BNFC-meta containers criterion mtl QuickCheck random
   ];
-  libraryToolDepends = [ hpack ];
   executableHaskellDepends = [
     base BNFC-meta containers criterion mtl QuickCheck random
   ];
@@ -22,7 +21,6 @@ mkDerivation {
   benchmarkHaskellDepends = [
     base BNFC-meta containers criterion mtl QuickCheck random
   ];
-  prePatch = "hpack";
   homepage = "https://github.com/githubuser/fomega#readme";
   license = lib.licenses.bsd3;
 }

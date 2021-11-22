@@ -18,10 +18,9 @@ mkDerivation {
     base bytestring cardano-binary cardano-ledger-alonzo
     cardano-ledger-core cardano-ledger-pretty cardano-ledger-shelley
     cardano-ledger-shelley-ma cardano-ledger-shelley-ma-test
-    cardano-ledger-shelley-test cardano-protocol-tpraos
-    cardano-slotting containers data-default-class hashable
-    plutus-ledger-api plutus-tx QuickCheck small-steps
-    strict-containers text
+    cardano-ledger-shelley-test cardano-slotting containers
+    data-default-class hashable plutus-ledger-api plutus-tx QuickCheck
+    small-steps strict-containers text
   ];
   testHaskellDepends = [
     base base16-bytestring bytestring cardano-binary

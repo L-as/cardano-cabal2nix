@@ -6,7 +6,7 @@
 mkDerivation {
   pname = "cardano-crypto";
   version = "1.1.0";
-  src = "${sources.cardano-crypto}/";
+  src = "${sources.cardano-crypto}";
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [

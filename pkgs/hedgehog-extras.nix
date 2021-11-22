@@ -8,7 +8,7 @@
 mkDerivation {
   pname = "hedgehog-extras";
   version = "0.1.0.0";
-  src = "${sources.hedgehog-extras}/";
+  src = "${sources.hedgehog-extras}";
   libraryHaskellDepends = [
     aeson aeson-pretty async base bytestring deepseq directory
     exceptions filepath hedgehog mmorph mtl network process resourcet

@@ -56,7 +56,7 @@ mkDerivation {
     aeson-pretty barbies base bytestring cassava criterion
     criterion-measurement deepseq directory exceptions extra hedgehog
     inline-r mmorph mtl optparse-applicative QuickCheck
-    quickcheck-instances ral random template-haskell text vector
+    quickcheck-instances ral random text vector
   ];
   doHaddock = false;
   description = "Language library for Plutus Core";

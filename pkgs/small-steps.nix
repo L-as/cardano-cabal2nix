@@ -1,9 +1,9 @@
 { sources }:
 
 { mkDerivation, aeson, ansi-wl-pprint, base, bytestring
-, cardano-binary, cardano-crypto-class, cborg, compact-map
-, containers, cryptonite, data-default-class, deepseq, formatting
-, free, lib, mtl, nothunks, strict-containers, text, transformers
+, cardano-binary, cardano-crypto-class, cborg, containers
+, cryptonite, data-default-class, deepseq, formatting, free, lib
+, mtl, nothunks, strict-containers, text, transformers
 }:
 mkDerivation {
   pname = "small-steps";
@@ -11,9 +11,9 @@ mkDerivation {
   src = "${sources.cardano-ledger-specs}/libs/small-steps";
   libraryHaskellDepends = [
     aeson ansi-wl-pprint base bytestring cardano-binary
-    cardano-crypto-class cborg compact-map containers cryptonite
-    data-default-class deepseq formatting free mtl nothunks
-    strict-containers text transformers
+    cardano-crypto-class cborg containers cryptonite data-default-class
+    deepseq formatting free mtl nothunks strict-containers text
+    transformers
   ];
   homepage = "https://github.com/input-output-hk/cardano-legder-specs";
   description = "Small step semantics";

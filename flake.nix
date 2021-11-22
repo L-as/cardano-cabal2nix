@@ -10,6 +10,8 @@
     supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 
     forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
+
+    packageList = builtins.attrNames (import ./pkgs.nix null null);
   in
   {
     haskellOverlayFor = system:

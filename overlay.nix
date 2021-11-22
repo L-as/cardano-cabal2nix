@@ -33,7 +33,11 @@ let
 
     network = final.network_3_1_2_5;
 
-    ouroboros-network = hlib.overrideCabal (_: { doCheck = false; }) prev.ouroboros-network;
+    cardano-address = null;
+
+    bech32 = hlib.dontCheck prev.bech32;
+    ouroboros-network = hlib.dontCheck prev.ouroboros-network;
+
     cardano-crypto-class = prev.cardano-crypto-class.override {
       inherit libsodium; # there's a hackage package named libsodium...
     };

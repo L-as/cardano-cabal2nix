@@ -5,11 +5,12 @@
 , cardano-ledger-alonzo-test, cardano-ledger-core
 , cardano-ledger-pretty, cardano-ledger-shelley
 , cardano-ledger-shelley-ma, cardano-ledger-shelley-ma-test
-, cardano-ledger-shelley-test, cardano-slotting, containers
-, criterion, data-default-class, deepseq, genvalidity
-, genvalidity-scientific, lib, mtl, plutus-ledger-api, QuickCheck
-, scientific, small-steps, small-steps-test, strict-containers
-, tasty, tasty-hunit, tasty-quickcheck, time, transformers
+, cardano-ledger-shelley-test, cardano-protocol-tpraos
+, cardano-slotting, containers, criterion, data-default-class
+, deepseq, genvalidity, genvalidity-scientific, lib, mtl
+, plutus-ledger-api, QuickCheck, scientific, small-steps
+, small-steps-test, strict-containers, tasty, tasty-hunit
+, tasty-quickcheck, time, transformers
 }:
 mkDerivation {
   pname = "cardano-ledger-test";
@@ -20,9 +21,10 @@ mkDerivation {
     cardano-ledger-alonzo cardano-ledger-alonzo-test
     cardano-ledger-core cardano-ledger-pretty cardano-ledger-shelley
     cardano-ledger-shelley-ma cardano-ledger-shelley-test
-    cardano-slotting containers data-default-class genvalidity
-    genvalidity-scientific mtl plutus-ledger-api QuickCheck scientific
-    small-steps small-steps-test strict-containers tasty tasty-hunit
+    cardano-protocol-tpraos cardano-slotting containers
+    data-default-class genvalidity genvalidity-scientific mtl
+    plutus-ledger-api QuickCheck scientific small-steps
+    small-steps-test strict-containers tasty tasty-hunit
     tasty-quickcheck time transformers
   ];
   testHaskellDepends = [ base cardano-ledger-shelley-test tasty ];

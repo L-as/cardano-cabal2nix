@@ -3,9 +3,9 @@
 { mkDerivation, base, bech32, bytestring, cardano-crypto-class
 , cardano-ledger-alonzo, cardano-ledger-byron, cardano-ledger-core
 , cardano-ledger-shelley, cardano-ledger-shelley-ma
-, cardano-protocol-tpraos, cardano-slotting, compact-map
-, containers, iproute, lib, mtl, plutus-ledger-api, prettyprinter
-, small-steps, strict-containers, text
+, cardano-protocol-tpraos, cardano-slotting, containers, iproute
+, lib, mtl, plutus-ledger-api, prettyprinter, small-steps
+, strict-containers, text
 }:
 mkDerivation {
   pname = "cardano-ledger-pretty";
@@ -15,8 +15,8 @@ mkDerivation {
     base bech32 bytestring cardano-crypto-class cardano-ledger-alonzo
     cardano-ledger-byron cardano-ledger-core cardano-ledger-shelley
     cardano-ledger-shelley-ma cardano-protocol-tpraos cardano-slotting
-    compact-map containers iproute mtl plutus-ledger-api prettyprinter
-    small-steps strict-containers text
+    containers iproute mtl plutus-ledger-api prettyprinter small-steps
+    strict-containers text
   ];
   license = lib.licenses.asl20;
 }

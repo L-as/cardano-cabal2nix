@@ -8,7 +8,7 @@
 mkDerivation {
   pname = "goblins";
   version = "0.2.0.0";
-  src = "${sources.goblins}/";
+  src = "${sources.goblins}";
   libraryHaskellDepends = [
     base bimap binary bytestring containers extra hedgehog microlens
     microlens-mtl microlens-th mmorph monad-control moo random

@@ -3,8 +3,8 @@
 { mkDerivation, aeson, array, base, binary, bytestring, cborg
 , containers, contra-tracer, directory, io-classes, io-sim, lib
 , monoidal-synchronisation, network, process, QuickCheck, quiet
-, serialise, splitmix, statistics-linreg, stm, tasty, Win32-network
-, tasty-quickcheck, tdigest, text, time, vector
+, serialise, splitmix, statistics-linreg, stm, tasty
+, tasty-quickcheck, tdigest, text, time, vector, Win32-network
 }:
 mkDerivation {
   pname = "network-mux";
