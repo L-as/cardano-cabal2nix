@@ -15,7 +15,11 @@
     haskellOverlayFor = system:
       let
         pkgs = nixpkgsFor system;
-        overlay = import ./overlay.nix { inherit (pkgs) fetchFromGitHub; lib = pkgs.haskell.lib.compose; };
+        overlay = import ./overlay.nix {
+          inherit (pkgs) fetchFromGitHub libsodium;
+          hlib = pkgs.haskell.lib.compose;
+          inherit (nixpkgs) lib;
+        };
       in
       overlay;
 

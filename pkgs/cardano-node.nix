@@ -21,7 +21,7 @@
 }:
 mkDerivation {
   pname = "cardano-node";
-  version = "1.31.0";
+  version = "1.30.0";
   src = "${sources.cardano-node}/cardano-node";
   isLibrary = true;
   isExecutable = true;
