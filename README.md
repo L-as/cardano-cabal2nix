@@ -1,6 +1,8 @@
+# (archived) Cardano packages using cabal2nix
 
-# Cardano packages using cabal2nix
+This has been archived because it is too much effort.
 
-## TODO
+The original purpose was to bypass the existing Nix code
+such that it could be built reproducibly without IOHK's binary cache.
 
-Use newer `optparse-applicative`? Alternatively just get upstream to do a new release.
+However, cabal2nix'ing it is simply way too much effort.
