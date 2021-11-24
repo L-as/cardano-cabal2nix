@@ -72,6 +72,9 @@ self: {
   cardano-prelude-test = self.callPackage (import ./pkgs/cardano-prelude-test.nix { inherit sources; }) {};
   cardano-prelude = self.callPackage (import ./pkgs/cardano-prelude.nix { inherit sources; }) {};
 
+  # cardano-sl-x509
+  cardano-sl-x509 = self.callPackage (import ./pkgs/cardano-sl-x509.nix { inherit sources; }) {};
+
   # cardano-wallet
   cardano-wallet-cli = self.callPackage (import ./pkgs/cardano-wallet-cli.nix { inherit sources; }) {};
   cardano-wallet-core-integration = self.callPackage (import ./pkgs/cardano-wallet-core-integration.nix { inherit sources; }) {};
@@ -95,6 +98,13 @@ self: {
   # hedgehog-extras
   hedgehog-extras = self.callPackage (import ./pkgs/hedgehog-extras.nix { inherit sources; }) {};
 
+  # http-client
+  http-client-openssl = self.callPackage (import ./pkgs/http-client-openssl.nix { inherit sources; }) {};
+  http-client-tls = self.callPackage (import ./pkgs/http-client-tls.nix { inherit sources; }) {};
+  http-client = self.callPackage (import ./pkgs/http-client.nix { inherit sources; }) {};
+  publicsuffixlist = self.callPackage (import ./pkgs/publicsuffixlist.nix { inherit sources; }) {};
+  http-conduit = self.callPackage (import ./pkgs/http-conduit.nix { inherit sources; }) {};
+
   # iohk-monitoring-framework
   contra-tracer = self.callPackage (import ./pkgs/contra-tracer.nix { inherit sources; }) {};
   lobemo-examples = self.callPackage (import ./pkgs/lobemo-examples.nix { inherit sources; }) {};
@@ -103,6 +113,7 @@ self: {
   lobemo-backend-editor = self.callPackage (import ./pkgs/lobemo-backend-editor.nix { inherit sources; }) {};
   lobemo-backend-ekg = self.callPackage (import ./pkgs/lobemo-backend-ekg.nix { inherit sources; }) {};
   lobemo-backend-graylog = self.callPackage (import ./pkgs/lobemo-backend-graylog.nix { inherit sources; }) {};
+  lobemo-backend-kafka = self.callPackage (import ./pkgs/lobemo-backend-kafka.nix { inherit sources; }) {};
   lobemo-backend-monitoring = self.callPackage (import ./pkgs/lobemo-backend-monitoring.nix { inherit sources; }) {};
   lobemo-backend-trace-acceptor = self.callPackage (import ./pkgs/lobemo-backend-trace-acceptor.nix { inherit sources; }) {};
   lobemo-backend-trace-forwarder = self.callPackage (import ./pkgs/lobemo-backend-trace-forwarder.nix { inherit sources; }) {};

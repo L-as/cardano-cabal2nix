@@ -11,7 +11,7 @@
 }:
 mkDerivation {
   pname = "iohk-monitoring";
-  version = "0.1.10.1";
+  version = "0.2.0.0";
   src = "${sources.iohk-monitoring-framework}/iohk-monitoring";
   libraryHaskellDepends = [
     aeson array async async-timer attoparsec auto-update base

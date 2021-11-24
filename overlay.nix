@@ -30,13 +30,28 @@ let
     });
 
     dns = final.callPackage (import ./deps/dns.nix { inherit lib; }) {};
+    unliftio-core = final.callPackage (import ./deps/unliftio-core.nix { inherit lib; }) {};
+    #aeson_1_4_7_1 = final.callPackage (import ./deps/aeson-1.4.nix { inherit lib; }) {};
 
     network = final.network_3_1_2_5;
 
     cardano-address = null;
 
+    # FIXME: tests
     bech32 = hlib.dontCheck prev.bech32;
+    bech32-th = hlib.dontCheck prev.bech32-th;
+    async-timer = hlib.dontCheck prev.async-timer;
     ouroboros-network = hlib.dontCheck prev.ouroboros-network;
+    OddWord = hlib.dontCheck prev.OddWord;
+    hs-rqlite = hlib.dontCheck prev.hs-rqlite;
+    gray-code = hlib.overrideCabal (o: {
+      doCheck = false;
+      postPatch = ''
+        rm Setup.hs
+      '';
+    }) prev.gray-code;
+    # FIXME: tests
+    moo = hlib.dontCheck prev.moo;
 
     cardano-crypto-class = prev.cardano-crypto-class.override {
       inherit libsodium; # there's a hackage package named libsodium...
